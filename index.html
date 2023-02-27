@@ -23,13 +23,17 @@
     }
     .container {
       display: flex;
-      padding-left: 20%;
     }
+
+    .logo-ig {
+      margin-left: 20%;
+    }
+
     .box {
       display: flex;
       flex-direction: column;
-      margin-left: 10px;
     }
+
     .login {
       margin-top: 40px;
       background-color: white;
@@ -114,31 +118,113 @@
     }
 
     @media screen and (min-width: 300px) and (max-width: 400px) {
-      .container .logo-ig {
-        display: none;
-      }
-
       .container {
         display: flex;
         padding-left: 0;
       }
 
+      .container .logo-ig {
+        display: none;
+      }
+
       .box {
         display: flex;
         flex-direction: column;
+        width: 100%;
+      }
+
+      .login,
+      .regis {
+        width: 100%;
+      }
+
+      .image-dl img {
+        width: 100%;
+      }
+
+      .image-dl {
+        display: flex;
+        margin-top: 10px;
+        margin-left: 0;
+      }
+    }
+
+    @media screen and (min-width: 401px) and (max-width: 600px) {
+      .container {
+        display: flex;
+        padding-left: 0;
+      }
+
+      .container .logo-ig {
+        display: none;
+      }
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .login,
+      .regis {
+        width: 100%;
+      }
+
+      .image-dl img {
+        width: 100%;
+      }
+
+      .image-dl {
+        display: flex;
+        margin-top: 10px;
+        margin-left: 0;
+      }
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 900px) {
+      .container {
+        display: flex;
+        padding-left: 0;
+      }
+
+      .container .logo-ig {
+        display: none;
+      }
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .login,
+      .regis {
+        width: 100%;
+      }
+
+      .image-dl img {
+        width: 100%;
+      }
+
+      .image-dl {
+        display: flex;
+        margin-top: 10px;
         margin-left: 0;
       }
     }
   </style>
   <body>
     <div class="container">
-      <img src="ig.png" alt="" style="padding-top: 10px" class="logo-ig" />
+      <div class="logo-ig">
+        <img src="ig.png" alt="" style="padding-top: 10px" />
+      </div>
 
       <div class="box">
         <div class="login">
           <h1>
             <center><b>Instagram</b></center>
           </h1>
+
           <div class="userpass">
             <div class="user" style="padding-bottom: 5px">
               <input
@@ -146,13 +232,16 @@
                 placeholder="Nomer Telepon, nama pengguna atau email"
               />
             </div>
+
             <div class="password">
               <input type="password" placeholder="Password" />
             </div>
+
             <div style="padding-top: 10px">
               <button type="submit" class="btn-login">Login</button>
             </div>
           </div>
+
           <div class="or">
             <hr />
             ATAU
