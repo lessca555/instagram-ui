@@ -1,138 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d508f9c7b5.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <title>Instagram</title>
-</head>
-<style>
-    body{
-        background-color: #FAFAFA;
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d508f9c7b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <title>Instagram Clone</title>
+  </head>
+  <style>
+    body {
+      background-color: #fafafa;
     }
-    .container{
+    .container {
+      display: flex;
+      padding-left: 20%;
+    }
+    .box {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+    }
+    .login {
+      margin-top: 40px;
+      background-color: white;
+      width: 400px;
+      height: 350px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .regis {
+      margin-top: 10px;
+      background-color: white;
+      width: 400px;
+      height: 60px;
+    }
+
+    .login h1 {
+      font-family: "Grand Hotel", cursive;
+      font-size: 3em;
+      font-weight: normal;
+      color: black;
+    }
+
+    .userpass {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-left: 10%;
+    }
+
+    .userpass input[type="text"] {
+      width: 90%;
+      height: 40px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      padding-left: 10px;
+      background-color: #fafafa;
+    }
+
+    .userpass input[type="password"] {
+      width: 90%;
+      height: 40px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      padding-left: 10px;
+      background-color: #fafafa;
+    }
+
+    .btn-login {
+      background-color: #2986cc;
+      color: white;
+      border: none;
+      width: 90%;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    .or {
+      display: flex;
+      padding-top: 15px;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 0.8em;
+    }
+
+    .or hr {
+      width: 100px;
+    }
+
+    .image-dl {
+      display: flex;
+      margin-top: 10px;
+      margin-left: 50px;
+    }
+
+    .image-dl img {
+      width: 150px;
+      height: 100%;
+    }
+
+    @media screen and (min-width: 300px) and (max-width: 400px) {
+      .container .logo-ig {
+        display: none;
+      }
+
+      .container {
         display: flex;
-        padding-left: 20%;
-    }
-    .box{
+        padding-left: 0;
+      }
+
+      .box {
         display: flex;
         flex-direction: column;
-        margin-left: 10px;
+        margin-left: 0;
+      }
     }
-    .login{
-        margin-top: 40px;
-        background-color: white;
-        width: 400px;
-        height: 350px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-
-    .regis{
-        margin-top: 10px;
-        background-color: white;
-        width: 400px; 
-        height: 60px;
-    }
-
-    .login h1{
-        font-family: 'Grand Hotel', cursive;
-        font-size: 3em;
-        font-weight: normal;
-        color: black;
-    }
-
-    .userpass{
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-        margin-left: 10%;
-    }
-
-    .userpass input[type=text]{
-        width: 90%;
-        height: 40px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        padding-left: 10px;
-        background-color: #FAFAFA;
-    }
-    
-    .userpass input[type=password]{
-        width: 90%;
-        height: 40px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        padding-left: 10px;
-        background-color: #FAFAFA;
-    }
-    
-    .btn-login{
-        background-color: #2986cc;
-        color: white;
-        border: none;
-        width: 90%;
-        height: 30px;
-        cursor: pointer;
-    }
-
-    .or{
-        display: flex;
-        padding-top: 15px;
-        margin-left: 10px;
-        margin-right: 10px;
-        font-size: 0.8em;
-    }
-
-    .or hr{
-        width: 100px;
-    }
-    .image-dl{
-        display: flex;
-        margin-top: 10px;
-        margin-left: 50px;
-    }
-    .image-dl img{
-        width: 150px;
-        height: 100%;
-    }
-</style>
-<body>
+  </style>
+  <body>
     <div class="container">
-        <img src="ig.png" alt="" style="padding-top: 10px;">
+      <img src="ig.png" alt="" style="padding-top: 10px" class="logo-ig" />
 
-        <div class="box">
-            <div class="login">
-                <h1><center><b>Instagram</b></center></h1>
-                <div class="userpass">
-                    <div class="user" style="padding-bottom: 5px;"><input type="text" placeholder="Nomer Telepon, nama pengguna atau email"></div>
-                    <div class="password"><input type="password" placeholder="Password"></div>
-                    <div style="padding-top: 10px;"><button type="submit" class="btn-login">Login</button></div>
-                </div>
-                <div class="or">    
-                    <hr>ATAU<hr>
-                </div>
-                <center style="padding-top: 10px; cursor: pointer;"><i style="color: #0b5394;" class="fa-brands fa-facebook-square"> Masuk dengan facebook</i></center>
-                <center style="padding-top: 10px; cursor: pointer;">Lupa kata sandi?</center>
+      <div class="box">
+        <div class="login">
+          <h1>
+            <center><b>Instagram</b></center>
+          </h1>
+          <div class="userpass">
+            <div class="user" style="padding-bottom: 5px">
+              <input
+                type="text"
+                placeholder="Nomer Telepon, nama pengguna atau email"
+              />
             </div>
-
-            <div class="regis">
-                <center style="padding-top: 20px;">Tidak punya akun? <a href="#" style="text-decoration: none;">Buat akun</a></center>
+            <div class="password">
+              <input type="password" placeholder="Password" />
             </div>
-            <center style="margin-top: 10px;">Dapatkan Aplikasi</center>
-            <div class="image-dl">
-                   <div style="margin-right: 10px;"><a href="https://apps.apple.com/id/app/instagram/id389801252"><img src="appstore.png" alt=""></a></div> 
-                    <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=in&gl=US"><img src="playstore.png" alt=""></a>
+            <div style="padding-top: 10px">
+              <button type="submit" class="btn-login">Login</button>
             </div>
+          </div>
+          <div class="or">
+            <hr />
+            ATAU
+            <hr />
+          </div>
+          <center style="padding-top: 10px; cursor: pointer">
+            <i style="color: #0b5394" class="fa-brands fa-facebook-square">
+              Masuk dengan facebook</i
+            >
+          </center>
+          <center style="padding-top: 10px; cursor: pointer">
+            Lupa kata sandi?
+          </center>
         </div>
+
+        <div class="regis">
+          <center style="padding-top: 20px">
+            Tidak punya akun?
+            <a href="#" style="text-decoration: none">Buat akun</a>
+          </center>
+        </div>
+        <center style="margin-top: 10px">Dapatkan Aplikasi</center>
+        <div class="image-dl">
+          <div style="margin-right: 10px">
+            <a href="https://apps.apple.com/id/app/instagram/id389801252"
+              ><img src="appstore.png" alt=""
+            /></a>
+          </div>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=in&gl=US"
+            ><img src="playstore.png" alt=""
+          /></a>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
